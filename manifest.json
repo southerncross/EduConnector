@@ -1,0 +1,37 @@
+{
+   "manifest_version" : 2,
+
+
+    "name": "eduConnector",
+    "description": "This is an netgate connector",
+    "version": "1.0",
+
+    "permissions": [
+	"http://*/*", // TODO what does this mean?
+	"https://*/*",
+	"tabs",
+	"webNavigation",
+	"storage",
+	"notifications",
+	"cookies"
+    ],
+
+    "browser_action": {
+	"default_icon": "picture/disconnect.ico",
+	//"default_popup": "popup.html",
+	"default_title": "eduConnector"
+    },
+
+    "background": {
+	"scripts": ["jquery-2.1.0.min.js", "Data.js", "PKUClass.js", "background.js"],
+	"persistent": true
+    },
+
+    "options_page": "options.html",
+
+    "web_accessible_resources": [
+	"picture/disconnect.ico",
+	"picture/free.ico",
+	"picture/global.ico"
+    ]
+ }
